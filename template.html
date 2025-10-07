@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Template Placeholders</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 40px; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; }
+    th { background: #f4f4f4; text-align: left; }
+    td.placeholder { font-family: monospace; color: #333; }
+    button { background: #007bff; border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    h2 { margin-top: 50px; color: #444; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+  </style>
+</head>
+<body>
+
+<h1>Word Template Placeholders</h1>
+<p>Click “Copy” to copy any placeholder directly to your clipboard.</p>
+
+<!-- Utility function -->
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
+}
+</script>
+
+<!-- Meta -->
+<h2>Meta</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Firm Name</td><td class="placeholder">{{ Meta.FirmName }}</td><td><button onclick="copyToClipboard('{{ Meta.FirmName }}')">Copy</button></td></tr>
+<tr><td>Created On</td><td class="placeholder">{{ Meta.CreatedOn }}</td><td><button onclick="copyToClipboard('{{ Meta.CreatedOn }}')">Copy</button></td></tr>
+<tr><td>Last Reviewed</td><td class="placeholder">{{ Meta.LastReviewed }}</td><td><button onclick="copyToClipboard('{{ Meta.LastReviewed }}')">Copy</button></td></tr>
+</table>
+
+<!-- Administrator -->
+<h2>Administrator</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ Administrator.Name }}</td><td><button onclick="copyToClipboard('{{ Administrator.Name }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ Administrator.Address }}</td><td><button onclick="copyToClipboard('{{ Administrator.Address }}')">Copy</button></td></tr>
+<tr><td>LSO#</td><td class="placeholder">{{ Administrator.LSO }}</td><td><button onclick="copyToClipboard('{{ Administrator.LSO }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ Administrator.Phone }}</td><td><button onclick="copyToClipboard('{{ Administrator.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ Administrator.Email }}</td><td><button onclick="copyToClipboard('{{ Administrator.Email }}')">Copy</button></td></tr>
+</table>
+
+<!-- Alternate Administrator -->
+<h2>Alternate Administrator</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ Administrator.Alternate.Name }}</td><td><button onclick="copyToClipboard('{{ Administrator.Alternate.Name }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ Administrator.Alternate.Address }}</td><td><button onclick="copyToClipboard('{{ Administrator.Alternate.Address }}')">Copy</button></td></tr>
+<tr><td>LSO#</td><td class="placeholder">{{ Administrator.Alternate.LSO }}</td><td><button onclick="copyToClipboard('{{ Administrator.Alternate.LSO }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ Administrator.Alternate.Phone }}</td><td><button onclick="copyToClipboard('{{ Administrator.Alternate.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ Administrator.Alternate.Email }}</td><td><button onclick="copyToClipboard('{{ Administrator.Alternate.Email }}')">Copy</button></td></tr>
+</table>
+
+<!-- Planning Licensee -->
+<h2>Planning Licensee</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.Name }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.Name }}')">Copy</button></td></tr>
+<tr><td>Home Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.HomeAddress }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.HomeAddress }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.Phone }}')">Copy</button></td></tr>
+<tr><td>LSO#</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.LSO }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.LSO }}')">Copy</button></td></tr>
+<tr><td>SIN#</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.SIN }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.SIN }}')">Copy</button></td></tr>
+<tr><td>Date of Birth</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.DOB }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.PlanningLicensee.DOB }}')">Copy</button></td></tr>
+</table>
+
+<!-- Business Info -->
+<h2>Business Info</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Name }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Name }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Address }}')">Copy</button></td></tr>
+<tr><td>Incorporation No</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.IncorporationNo }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.IncorporationNo }}')">Copy</button></td></tr>
+<tr><td>Incorporation Date</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.IncorporationDate }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.IncorporationDate }}')">Copy</button></td></tr>
+<tr><td>CRA Tax No</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.CRA TaxNo }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.CRA TaxNo }}')">Copy</button></td></tr>
+<tr><td>HST No</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.HSTNo }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.HSTNo }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Email }}')">Copy</button></td></tr>
+<tr><td>Website</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Website }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Website }}')">Copy</button></td></tr>
+<tr><td>Blog</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Blog }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.Blog }}')">Copy</button></td></tr>
+<tr><td>Social Media</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.BusinessInfo.SocialMedia }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.BusinessInfo.SocialMedia }}')">Copy</button></td></tr>
+</table>
+
+<!-- Emergency Contact -->
+<h2>Emergency Contact</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Name }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Name }}')">Copy</button></td></tr>
+<tr><td>Relationship</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Relationship }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Relationship }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part1.EmergencyContact.Email }}')">Copy</button></td></tr>
+</table>
+
+<!-- Office Manager -->
+<h2>Office Manager</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.OfficeManager.Name }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.OfficeManager.Name }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.OfficeManager.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.OfficeManager.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.OfficeManager.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.OfficeManager.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.OfficeManager.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.OfficeManager.Email }}')">Copy</button></td></tr>
+<tr><td>Work Arrangement</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.OfficeManager.WorkArrangement }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.OfficeManager.WorkArrangement }}')">Copy</button></td></tr>
+<tr><td>File Access</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.OfficeManager.FileAccess }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.OfficeManager.FileAccess }}')">Copy</button></td></tr>
+</table>
+
+<!-- Staff -->
+<h2>Staff</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.Staff.Name }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.Staff.Name }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.Staff.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.Staff.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.Staff.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.Staff.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.Staff.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.Staff.Email }}')">Copy</button></td></tr>
+<tr><td>Work Arrangement</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.Staff.WorkArrangement }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.Staff.WorkArrangement }}')">Copy</button></td></tr>
+<tr><td>File Access</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part2.Staff.FileAccess }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part2.Staff.FileAccess }}')">Copy</button></td></tr>
+</table>
+
+<!-- Landlord -->
+<h2>Landlord</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Business Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.BusinessName }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.BusinessName }}')">Copy</button></td></tr>
+<tr><td>Contact</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.Contact }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.Contact }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.Phone }}')">Copy</button></td></tr>
+<tr><td>Key Terms</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.KeyTerms }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.KeyTerms }}')">Copy</button></td></tr>
+<tr><td>Renewal Date</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.RenewalDate }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.RenewalDate }}')">Copy</button></td></tr>
+<tr><td>Agreement Access</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Landlord.AgreementAccess }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Landlord.AgreementAccess }}')">Copy</button></td></tr>
+</table>
+
+<!-- Insurer -->
+<h2>Insurer</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Name }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Name }}')">Copy</button></td></tr>
+<tr><td>Policy No</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.PolicyNo }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.PolicyNo }}')">Copy</button></td></tr>
+<tr><td>Coverage</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Coverage }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Coverage }}')">Copy</button></td></tr>
+<tr><td>Contact</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Contact }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Contact }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Email }}')">Copy</button></td></tr>
+<tr><td>Website</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part3.Insurer.Website }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part3.Insurer.Website }}')">Copy</button></td></tr>
+</table>
+
+<!-- Bookkeeper -->
+<h2>Bookkeeper</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Business Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Bookkeeper.BusinessName }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Bookkeeper.BusinessName }}')">Copy</button></td></tr>
+<tr><td>Contact</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Contact }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Contact }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Email }}')">Copy</button></td></tr>
+<tr><td>Website</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Website }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Bookkeeper.Website }}')">Copy</button></td></tr>
+</table>
+
+<!-- Consultants -->
+<h2>Consultants</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Business Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Consultants.BusinessName }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Consultants.BusinessName }}')">Copy</button></td></tr>
+<tr><td>Contact</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Consultants.Contact }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Consultants.Contact }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Consultants.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Consultants.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Consultants.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Consultants.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Consultants.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Consultants.Email }}')">Copy</button></td></tr>
+<tr><td>Website</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Consultants.Website }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Consultants.Website }}')">Copy</button></td></tr>
+</table>
+
+
+<!-- Suppliers -->
+<h2>Suppliers</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Business Name</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Suppliers.BusinessName }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Suppliers.BusinessName }}')">Copy</button></td></tr>
+<tr><td>Contact</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Suppliers.Contact }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Suppliers.Contact }}')">Copy</button></td></tr>
+<tr><td>Address</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Suppliers.Address }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Suppliers.Address }}')">Copy</button></td></tr>
+<tr><td>Phone</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Suppliers.Phone }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Suppliers.Phone }}')">Copy</button></td></tr>
+<tr><td>Email</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Suppliers.Email }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Suppliers.Email }}')">Copy</button></td></tr>
+<tr><td>Website</td><td class="placeholder">{{ ProfessionalBusinessInformation_Part4.Suppliers.Website }}</td><td><button onclick="copyToClipboard('{{ ProfessionalBusinessInformation_Part4.Suppliers.Website }}')">Copy</button></td></tr>
+</table>
+
+
+
+<!-- Business Property -->
+<h2>Business Property</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Office Details</td><td class="placeholder">{{ BusinessProperty.OfficeDetails }}</td><td><button onclick="copyToClipboard('{{ BusinessProperty.OfficeDetails }}')">Copy</button></td></tr>
+<tr><td>Business Records</td><td class="placeholder">{{ BusinessProperty.BusinessRecords }}</td><td><button onclick="copyToClipboard('{{ BusinessProperty.BusinessRecords }}')">Copy</button></td></tr>
+<tr><td>Technology</td><td class="placeholder">{{ BusinessProperty.Technology }}</td><td><button onclick="copyToClipboard('{{ BusinessProperty.Technology }}')">Copy</button></td></tr>
+</table>
+
+<!-- Bank Accounts – General -->
+<h2>Bank Accounts – General</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Institution</td><td class="placeholder">{{ BankAccounts.GeneralAccount.Institution }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.GeneralAccount.Institution }}')">Copy</button></td></tr>
+<tr><td>Account No</td><td class="placeholder">{{ BankAccounts.GeneralAccount.AccountNo }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.GeneralAccount.AccountNo }}')">Copy</button></td></tr>
+<tr><td>Branch No</td><td class="placeholder">{{ BankAccounts.GeneralAccount.BranchNo }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.GeneralAccount.BranchNo }}')">Copy</button></td></tr>
+<tr><td>Contact</td><td class="placeholder">{{ BankAccounts.GeneralAccount.Contact }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.GeneralAccount.Contact }}')">Copy</button></td></tr>
+<tr><td>Signatories</td><td class="placeholder">{{ BankAccounts.GeneralAccount.Signatories }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.GeneralAccount.Signatories }}')">Copy</button></td></tr>
+</table>
+
+<!-- Bank Accounts – Trust -->
+<h2>Bank Accounts – Trust</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Institution</td><td class="placeholder">{{ BankAccounts.TrustAccount.Institution }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.TrustAccount.Institution }}')">Copy</button></td></tr>
+<tr><td>Account No</td><td class="placeholder">{{ BankAccounts.TrustAccount.AccountNo }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.TrustAccount.AccountNo }}')">Copy</button></td></tr>
+<tr><td>Branch No</td><td class="placeholder">{{ BankAccounts.TrustAccount.BranchNo }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.TrustAccount.BranchNo }}')">Copy</button></td></tr>
+<tr><td>Signatories</td><td class="placeholder">{{ BankAccounts.TrustAccount.Signatories }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.TrustAccount.Signatories }}')">Copy</button></td></tr>
+<tr><td>Online Banking</td><td class="placeholder">{{ BankAccounts.TrustAccount.OnlineBanking }}</td><td><button onclick="copyToClipboard('{{ BankAccounts.TrustAccount.OnlineBanking }}')">Copy</button></td></tr>
+</table>
+
+<!-- Client Files – Active -->
+<h2>Client Files – Active</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Tracking Chart</td><td class="placeholder">{{ ClientFiles.Active.TrackingChart }}</td><td><button onclick="copyToClipboard('{{ ClientFiles.Active.TrackingChart }}')">Copy</button></td></tr>
+<tr><td>File Location</td><td class="placeholder">{{ ClientFiles.Active.FileLocation }}</td><td><button onclick="copyToClipboard('{{ ClientFiles.Active.FileLocation }}')">Copy</button></td></tr>
+<tr><td>Client Property</td><td class="placeholder">{{ ClientFiles.Active.ClientProperty }}</td><td><button onclick="copyToClipboard('{{ ClientFiles.Active.ClientProperty }}')">Copy</button></td></tr>
+</table>
+
+<!-- Client Files – Closed -->
+<h2>Client Files – Closed</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Tracking Chart</td><td class="placeholder">{{ ClientFiles.Closed.TrackingChart }}</td><td><button onclick="copyToClipboard('{{ ClientFiles.Closed.TrackingChart }}')">Copy</button></td></tr>
+<tr><td>File Location</td><td class="placeholder">{{ ClientFiles.Closed.FileLocation }}</td><td><button onclick="copyToClipboard('{{ ClientFiles.Closed.FileLocation }}')">Copy</button></td></tr>
+</table>
+
+<!-- Other Professional Roles -->
+<h2>Other Professional Roles</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Estate/Trust</td><td class="placeholder">{{ OtherProfessionalRoles.EstateTrust }}</td><td><button onclick="copyToClipboard('{{ OtherProfessionalRoles.EstateTrust }}')">Copy</button></td></tr>
+<tr><td>Guardianship</td><td class="placeholder">{{ OtherProfessionalRoles.Guardianship }}</td><td><button onclick="copyToClipboard('{{ OtherProfessionalRoles.Guardianship }}')">Copy</button></td></tr>
+<tr><td>POA</td><td class="placeholder">{{ OtherProfessionalRoles.POA }}</td><td><button onclick="copyToClipboard('{{ OtherProfessionalRoles.POA }}')">Copy</button></td></tr>
+</table>
+
+<!-- Other Arrangements -->
+<h2>Other Arrangements (Loop)</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Loop</td><td class="placeholder">{% for arrangement in OtherArrangements %} {{ arrangement }} {% endfor %}</td><td><button onclick="copyToClipboard('{% for arrangement in OtherArrangements %} {{ arrangement }} {% endfor %}')">Copy</button></td></tr>
+</table>
+
+<!-- Appendix -->
+<h2>Appendix (Loop)</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Loop</td><td class="placeholder">{% for doc in Appendix.documents %} {{ doc }} {% endfor %}</td><td><button onclick="copyToClipboard('{% for doc in Appendix.documents %} {{ doc }} {% endfor %}')">Copy</button></td></tr>
+</table>
+
+<!-- Uploaded Files -->
+<h2>Uploaded Files (Loop)</h2>
+<table>
+<tr><th>Field</th><th>Placeholder</th><th>Copy</th></tr>
+<tr><td>Loop</td><td class="placeholder">{% for f in UploadedFiles.Meta %} {{ f.name }} {{ f.fileName }} {{ f.size }} {{ f.type }} {% endfor %}</td><td><button onclick="copyToClipboard('{% for f in UploadedFiles.Meta %} {{ f.name }} {{ f.fileName }} {{ f.size }} {{ f.type }} {% endfor %}')">Copy</button></td></tr>
+</table>
+
+
+<!-- Due to space, the rest follows same pattern (Emergency Contact, Office Manager, Staff, Landlord, Insurer, Bookkeeper, Consultants, Suppliers, Business Property, Bank Accounts, Client Files, Other Roles, Other Arrangements, Appendix, Uploaded Files) -->
+
+</body>
+</html>
